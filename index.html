@@ -7,9 +7,9 @@
   <meta name="theme-color" content="#090a0d">
   <meta name="description" content="백승훈의 개인 프로필. 대성네트웍의 현장 경험과 알파리졸브의 소프트웨어 기술로 현장의 변화를 만듭니다.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="백승훈 | Baek Seung-hoon">
+  <meta property="og:title" content="백승훈 | SEUNGHUN BAEK">
   <meta property="og:description" content="현장의 경험을, 다음의 기술로. 백승훈의 사업과 관심 분야를 소개합니다.">
-  <title>백승훈 | Baek Seung-hoon</title>
+  <title>백승훈 | SEUNGHUN BAEK</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23090a0d'/%3E%3Ctext x='15' y='47' font-family='Arial,sans-serif' font-size='44' font-weight='700' fill='%23ffffff'%3Eb%3C/text%3E%3Ccircle cx='49' cy='47' r='5' fill='%233c73ff'/%3E%3C/svg%3E">
   <style>
     :root{--bg:#090a0d;--panel:#11141a;--line:#2a2d35;--text:#f7f8fa;--muted:#acb0bc;--blue:#5487ff;--max:1280px}
@@ -62,12 +62,31 @@
       .footer{row-gap:10px}
     }
 
+  
+    /* Portrait and preferred English name. */
+    .hero-layout,body[data-language=en] .hero-layout{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);align-items:center}
+    .hero-copy{min-width:0}
+    .hero-copy .intro-side{margin-top:28px;max-width:540px}
+    .hero-photo{width:100%;max-width:320px;justify-self:end;margin:0;overflow:hidden;border:1px solid var(--line);border-radius:3px;background:#eee}
+    .hero-photo img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 46%}
+    .big-name{font-size:clamp(3rem,10.1vw,8.75rem)}
+    @media(max-width:1000px){
+      .hero-layout,body[data-language=en] .hero-layout{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:32px}
+      .big-name{font-size:clamp(2.5rem,10.1vw,6.25rem)}
+    }
+    @media(max-width:680px){
+      .hero-layout,body[data-language=en] .hero-layout{grid-template-columns:minmax(0,1fr);gap:28px}
+      .hero-photo{max-width:18rem;justify-self:center}
+      .hero-copy .intro-side{margin-top:24px}
+      .big-name{font-size:clamp(1.875rem,10.1vw,4.25rem);letter-spacing:-.055em}
+    }
+
   </style>
 </head>
 <body data-language="ko">
   <a class="skip" href="#main" data-ko="본문 바로가기" data-en="Skip to content">본문 바로가기</a>
   <header class="header" id="top"><div class="wrap header-inner">
-    <a class="wordmark" href="#top" aria-label="Baek Seung-hoon, home">BAEK<span>.</span></a>
+    <a class="wordmark" href="#top" aria-label="SEUNGHUN BAEK, home">BAEK<span>.</span></a>
     <div class="nav-group">
       <nav id="navigation" aria-label="주요 메뉴"><a href="#about" data-ko="소개" data-en="About">소개</a><a href="#work" data-ko="사업과 역할" data-en="Work">사업과 역할</a><a href="#contact" data-ko="연결" data-en="Connect">연결</a></nav>
       <div class="languages" role="group" aria-label="언어 선택 / Language"><button type="button" data-lang="ko" aria-pressed="true" aria-label="한국어">KO</button><button type="button" data-lang="en" aria-pressed="false" aria-label="English">EN</button></div>
@@ -78,10 +97,13 @@
     <section class="hero" aria-labelledby="hero-title">
       <p class="eyebrow"><span class="blue">BUSINESS & TECHNOLOGY</span> PERSONAL PROFILE</p>
       <div class="hero-layout">
+        <div class="hero-copy">
         <h1 id="hero-title"><span data-ko="현장의 경험을," data-en="Experience from the field.">현장의 경험을,</span><span data-ko="다음의 기술로." data-en="Technology for what’s next.">다음의 기술로.</span></h1>
-        <div class="intro-side"><p class="name" data-ko="백승훈" data-en="Baek Seung-hoon">백승훈</p><p class="role" data-ko="알파리졸브 대표 · 대성네트웍 부사장" data-en="CEO, ALPHA Resolve · Vice President, Daesung Network">알파리졸브 대표 · 대성네트웍 부사장</p><p class="intro" data-ko="통신 인프라 현장의 경험을 바탕으로, 기업의 일하는 방식을 소프트웨어와 AI로 바꾸는 일을 합니다." data-en="I bring experience in telecommunications infrastructure to building software and AI solutions that improve how businesses work.">통신 인프라 현장의 경험을 바탕으로, 기업의 일하는 방식을 소프트웨어와 AI로 바꾸는 일을 합니다.</p><a href="#work" data-ko="현재의 활동 살펴보기" data-en="Explore my work">현재의 활동 살펴보기</a></div>
+        <div class="intro-side"><p class="name" data-ko="백승훈" data-en="SEUNGHUN BAEK">백승훈</p><p class="role" data-ko="알파리졸브 대표 · 대성네트웍 부사장" data-en="CEO, ALPHA Resolve · Vice President, Daesung Network">알파리졸브 대표 · 대성네트웍 부사장</p><p class="intro" data-ko="통신 인프라 현장의 경험을 바탕으로, 기업의 일하는 방식을 소프트웨어와 AI로 바꾸는 일을 합니다." data-en="I bring experience in telecommunications infrastructure to building software and AI solutions that improve how businesses work.">통신 인프라 현장의 경험을 바탕으로, 기업의 일하는 방식을 소프트웨어와 AI로 바꾸는 일을 합니다.</p><a href="#work" data-ko="현재의 활동 살펴보기" data-en="Explore my work">현재의 활동 살펴보기</a></div>
+        </div>
+        <figure class="hero-photo"><img src="./profile-seunghun-baek.jpg" alt="백승훈 프로필 사진 / SEUNGHUN BAEK portrait" width="1024" height="1536" fetchpriority="high" decoding="async"></figure>
       </div>
-      <div class="name-band"><p class="big-name"><span>SEUNG</span> <span>HOON</span></p><p class="name-caption">BAEK<br><strong>경험 · 연결 · 실행</strong></p></div>
+      <div class="name-band"><p class="big-name"><span>SEUNGHUN</span> <span>BAEK</span></p><p class="name-caption">BAEK<br><strong>경험 · 연결 · 실행</strong></p></div>
       <div class="hero-bottom"><span>BASED IN SOUTH KOREA</span><span>INFRASTRUCTURE / SOFTWARE / AI</span></div>
     </section>
     <section id="about" class="section" aria-labelledby="about-title">
@@ -106,7 +128,7 @@
     <section id="contact" class="contact" aria-labelledby="contact-title"><div class="contact-grid"><div><p class="eyebrow"><span class="blue">04</span> CONNECT</p><h2 id="contact-title" data-ko="함께 이야기할\n다음의 가능성." data-en="Let’s explore\nwhat’s next." style="white-space:pre-line">함께 이야기할
 다음의 가능성.</h2></div><div class="contact-side"><p data-ko="현장업무 자동화, 스마트공장, 통신 인프라 협업에 관한 이야기는 각 회사의 공식 채널에서 이어갑니다." data-en="For conversations about field automation, smart factories and telecommunications infrastructure, connect through each company’s official channels.">현장업무 자동화, 스마트공장, 통신 인프라 협업에 관한 이야기는 각 회사의 공식 채널에서 이어갑니다.</p><div class="contact-links"><a class="button primary" href="https://www.alpharesolve.co.kr" target="_blank" rel="noopener noreferrer" data-ko="알파리졸브 홈페이지" data-en="ALPHA Resolve website">알파리졸브 홈페이지</a><a class="button" href="https://daesungnetwork.com/" target="_blank" rel="noopener noreferrer" data-ko="대성네트웍 홈페이지" data-en="Daesung Network website">대성네트웍 홈페이지</a><a class="button" href="https://www.instagram.com/alpharesolve.kr/" target="_blank" rel="noopener noreferrer">Instagram</a></div></div></div></section>
   </main>
-  <footer class="wrap footer"><span>© <span id="year">2026</span> BAEK SEUNG-HOON</span><a href="#top" data-ko="맨 위로" data-en="Back to top">맨 위로</a></footer>
+  <footer class="wrap footer"><span>© <span id="year">2026</span> SEUNGHUN BAEK</span><a href="#top" data-ko="맨 위로" data-en="Back to top">맨 위로</a></footer>
   <script>
     (() => {
       const buttons = document.querySelectorAll('[data-lang]');
@@ -120,8 +142,8 @@
         document.querySelector('.name-caption strong').textContent = lang === 'en' ? 'EXPERIENCE · CONNECTION · ACTION' : '경험 · 연결 · 실행';
         buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.lang === lang)));
         nav.setAttribute('aria-label', lang === 'en' ? 'Main navigation' : '주요 메뉴');
-        document.title = lang === 'en' ? 'Baek Seung-hoon | Business & Technology' : '백승훈 | Baek Seung-hoon';
-        const description = lang === 'en' ? 'The personal profile of Baek Seung-hoon. Connecting telecommunications field experience with software and AI at ALPHA Resolve and Daesung Network.' : '백승훈의 개인 프로필. 대성네트웍의 현장 경험과 알파리졸브의 소프트웨어 기술로 현장의 변화를 만듭니다.';
+        document.title = lang === 'en' ? 'SEUNGHUN BAEK | Business & Technology' : '백승훈 | SEUNGHUN BAEK';
+        const description = lang === 'en' ? 'The personal profile of SEUNGHUN BAEK. Connecting telecommunications field experience with software and AI at ALPHA Resolve and Daesung Network.' : '백승훈의 개인 프로필. 대성네트웍의 현장 경험과 알파리졸브의 소프트웨어 기술로 현장의 변화를 만듭니다.';
         document.querySelector('meta[name="description"]').content = description;
         document.querySelector('meta[property="og:title"]').content = document.title;
         document.querySelector('meta[property="og:description"]').content = description;
@@ -140,5 +162,6 @@
   </script>
 </body>
 </html>
+
 
 

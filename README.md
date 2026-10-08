@@ -23,8 +23,13 @@
 
 공식 안내: https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
 
+## 프로필 사진
+
+`profile-seunghun-baek.jpg`는 사이트 첫 화면에 표시되는 프로필 사진입니다. 사진을 교체할 때 같은 파일명으로 업로드하면 됩니다.
+
 ## 내용 수정
 
-`index.html`의 `data-ko`는 한국어, `data-en`은 영어 문구입니다. 두 속성과 기본 표시 문구를 함께 수정합니다. 이름의 영문 표기는 초안에서 **Baek Seung-hoon**으로 작성했습니다.
+`index.html`의 `data-ko`는 한국어, `data-en`은 영어 문구입니다. 두 속성과 기본 표시 문구를 함께 수정합니다. 이름의 영문 표기는 **SEUNGHUN BAEK**입니다.
 
 본 사이트의 소개 문구는 제공된 사업·직책 정보를 바탕으로 작성한 초안입니다. 특정 고객 실적, 매출, 수상, 성과 수치는 포함하지 않았습니다. 연락처는 회사 공식 채널로 연결합니다.
+
