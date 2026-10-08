@@ -18,6 +18,50 @@
     @media(max-width:1000px){.wrap{width:calc(100% - 56px)}.hero-layout{gap:40px}.hero h1{font-size:clamp(36px,5vw,50px)}.intro-side{padding-left:24px}.section-top{gap:32px;grid-template-columns:1fr 2.8fr}.about-body{margin-left:calc(26.3% + 8px)}.work-card{padding:28px}.card-head{margin-bottom:40px}.big-name{font-size:14vw}summary{grid-template-columns:40px 1fr 160px 24px}details p{margin-left:60px}.contact-grid{gap:30px}}
     @media(max-width:680px){html{scroll-padding-top:24px}.wrap{width:calc(100% - 40px)}.header-inner{min-height:78px;gap:12px;flex-wrap:wrap;position:relative}.wordmark{font-size:20px}.nav-group{gap:14px}.menu{display:block;padding:8px 2px;min-height:44px;font-size:13px;border:0;background:transparent;color:#d8deea}.languages button{min-height:34px;min-width:34px}.languages{padding:2px}nav{display:none;position:absolute;left:-20px;right:-20px;top:78px;background:#11141a;padding:24px 20px;border-bottom:1px solid var(--line);z-index:3;justify-content:space-between;gap:14px}nav.open{display:flex}.hero{padding-top:42px}.eyebrow{font-size:12px;letter-spacing:.09em}.hero-layout,body[data-language=en] .hero-layout{grid-template-columns:1fr;gap:32px;margin:28px 0 44px}.hero h1,body[data-language=en] .hero h1{font-size:clamp(32px,9.4vw,55px);letter-spacing:-.05em}.intro-side{padding-left:18px;max-width:100%;border-color:#3c73ff}.intro-side .name{font-size:22px}.role{font-size:13px;margin-bottom:14px}.intro-side .intro{font-size:15px;max-width:450px}.intro-side a{margin-top:18px}.name-band{display:block;padding-bottom:14px}.big-name{font-size:18.1vw;letter-spacing:-.065em}.name-caption{display:none}.hero-bottom{font-size:11px;letter-spacing:.04em;gap:10px;padding-top:14px}.section{padding:66px 0}.section-top{display:block;margin-bottom:30px}.section-top .eyebrow{padding:0;margin-bottom:22px}.section-top h2{font-size:29px;line-height:1.45}.about-body{margin-left:0;font-size:16px}.principle{font-size:13px;align-items:start;margin-top:28px}.principle:before{margin-top:10px;width:24px}.work-grid{grid-template-columns:1fr;gap:16px}.work-card{padding:26px;min-height:350px}.card-head{margin-bottom:36px}.work-card h3{font-size:29px}.work-card .description{margin-bottom:28px}.work-card .position{font-size:14px}.work-card .description{font-size:16px}.card-foot{font-size:12px}summary{grid-template-columns:26px 1fr 22px;gap:10px;padding:25px 0}summary h3{font-size:20px}.field-en{display:none}details p{margin:0 0 26px 36px;font-size:15px}.contact{padding:66px 0 52px}.contact-grid{grid-template-columns:1fr;gap:28px}.contact h2{font-size:37px}.contact-side p{font-size:16px}.contact-links{gap:10px}.button{font-size:13px;padding:12px 17px}.footer{font-size:11px;align-items:start}.footer a{font-size:12px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+  
+    /* Let content shrink and wrap inside narrow viewports instead of clipping it. */
+    body{overflow-wrap:anywhere}
+    .hero{overflow:visible}
+    .header-inner>*,.nav-group,.hero-layout>*,.section-top>*,.work-grid>*,.contact-grid>*,summary>*{min-width:0}
+    .hero-layout{grid-template-columns:minmax(0,1.45fr) minmax(0,1fr)}
+    body[data-language=en] .hero-layout{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr)}
+    .section-top{grid-template-columns:minmax(0,1fr) minmax(0,3fr)}
+    .work-grid,.contact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .name-band{flex-wrap:wrap}
+    .big-name{max-width:100%;white-space:normal;overflow-wrap:normal;word-break:normal;line-height:1.12}
+    .big-name span{display:inline-block;max-width:100%}
+    .name-caption{flex:0 1 11rem}
+    .card-head,.hero-bottom,.footer{flex-wrap:wrap}
+    .card-head>*{min-width:0;max-width:100%}
+    .button{display:inline-flex;align-items:center;justify-content:center;max-width:100%;text-align:center;white-space:normal;overflow-wrap:anywhere}
+    .contact-links>*{min-width:0}
+    summary{grid-template-columns:70px minmax(0,1fr) minmax(0,200px) 28px}
+    @media(max-width:1000px){
+      .hero-layout,body[data-language=en] .hero-layout{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .section-top{grid-template-columns:minmax(0,1fr) minmax(0,2.8fr)}
+      .big-name{font-size:clamp(3rem,12.5vw,8rem)}
+      summary{grid-template-columns:40px minmax(0,1fr) minmax(0,160px) 24px}
+    }
+    @media(max-width:680px){
+      .wrap{width:calc(100% - 2.5rem)}
+      .header-inner{padding-block:12px}
+      .nav-group{max-width:100%;margin-left:auto;flex-wrap:wrap;justify-content:flex-end}
+      nav{top:100%;flex-wrap:wrap}
+      .hero-layout,body[data-language=en] .hero-layout,.work-grid,.contact-grid{grid-template-columns:minmax(0,1fr)}
+      .hero h1,body[data-language=en] .hero h1{font-size:clamp(2rem,8.8vw,3.25rem);overflow-wrap:anywhere}
+      .big-name{font-size:clamp(2rem,12.5vw,5rem);letter-spacing:-.055em}
+      .hero-bottom{align-items:flex-start;row-gap:8px}
+      .hero-bottom>span{max-width:100%;min-width:0}
+      .work-card{padding:clamp(1.125rem,5.8vw,1.625rem);min-width:0}
+      .card-head{row-gap:10px}
+      .tag{overflow-wrap:anywhere}
+      summary{grid-template-columns:26px minmax(0,1fr) 22px}
+      .contact h2{font-size:clamp(1.875rem,8.8vw,2.3125rem)}
+      .contact-links{display:grid;grid-template-columns:minmax(0,1fr)}
+      .contact-links .button{width:100%;font-size:.875rem}
+      .footer{row-gap:10px}
+    }
+
   </style>
 </head>
 <body data-language="ko">
@@ -37,7 +81,7 @@
         <h1 id="hero-title"><span data-ko="현장의 경험을," data-en="Experience from the field.">현장의 경험을,</span><span data-ko="다음의 기술로." data-en="Technology for what’s next.">다음의 기술로.</span></h1>
         <div class="intro-side"><p class="name" data-ko="백승훈" data-en="Baek Seung-hoon">백승훈</p><p class="role" data-ko="알파리졸브 대표 · 대성네트웍 부사장" data-en="CEO, ALPHA Resolve · Vice President, Daesung Network">알파리졸브 대표 · 대성네트웍 부사장</p><p class="intro" data-ko="통신 인프라 현장의 경험을 바탕으로, 기업의 일하는 방식을 소프트웨어와 AI로 바꾸는 일을 합니다." data-en="I bring experience in telecommunications infrastructure to building software and AI solutions that improve how businesses work.">통신 인프라 현장의 경험을 바탕으로, 기업의 일하는 방식을 소프트웨어와 AI로 바꾸는 일을 합니다.</p><a href="#work" data-ko="현재의 활동 살펴보기" data-en="Explore my work">현재의 활동 살펴보기</a></div>
       </div>
-      <div class="name-band"><p class="big-name">SEUNG HOON</p><p class="name-caption">BAEK<br><strong>경험 · 연결 · 실행</strong></p></div>
+      <div class="name-band"><p class="big-name"><span>SEUNG</span> <span>HOON</span></p><p class="name-caption">BAEK<br><strong>경험 · 연결 · 실행</strong></p></div>
       <div class="hero-bottom"><span>BASED IN SOUTH KOREA</span><span>INFRASTRUCTURE / SOFTWARE / AI</span></div>
     </section>
     <section id="about" class="section" aria-labelledby="about-title">
@@ -96,4 +140,5 @@
   </script>
 </body>
 </html>
+
 
