@@ -83,6 +83,16 @@
 
     .tag[href]{transition:border-color .2s,color .2s,background .2s}
     .tag[href]:hover{border-color:var(--blue);color:var(--text);background:#1a2233}
+
+    /* Shared visitor total; wraps with the footer on small screens. */
+    .visitor-counter{min-width:0;max-width:100%;display:grid;gap:3px;text-align:center}
+    .visitor-total{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px}
+    .visitor-dot{width:6px;height:6px;border-radius:50%;background:var(--blue);flex:none}
+    .visitor-total strong{font-size:16px;font-variant-numeric:tabular-nums;color:var(--text)}
+    .visitor-counter small{font-size:10px;color:var(--muted)}
+    .visitor-unavailable{display:none}
+    .visitor-counter[data-status=error] .visitor-unavailable{display:block}
+    @media(max-width:680px){.visitor-counter{order:3;flex-basis:100%;text-align:left;padding-top:12px;border-top:1px solid var(--line)}.visitor-total{justify-content:flex-start}}
   </style>
 </head>
 <body data-language="ko">
@@ -130,7 +140,15 @@
     <section id="contact" class="contact" aria-labelledby="contact-title"><div class="contact-grid"><div><p class="eyebrow"><span class="blue">04</span> CONNECT</p><h2 id="contact-title" data-ko="함께 이야기할\n다음의 가능성." data-en="Let’s explore\nwhat’s next." style="white-space:pre-line">함께 이야기할
 다음의 가능성.</h2></div><div class="contact-side"><p data-ko="현장업무 자동화, 스마트공장, 통신 인프라 협업에 관한 이야기는 각 회사의 공식 채널에서 이어갑니다." data-en="For conversations about field automation, smart factories and telecommunications infrastructure, connect through each company’s official channels.">현장업무 자동화, 스마트공장, 통신 인프라 협업에 관한 이야기는 각 회사의 공식 채널에서 이어갑니다.</p><div class="contact-links"><a class="button primary" href="https://www.alpharesolve.co.kr" target="_blank" rel="noopener noreferrer" data-ko="알파리졸브 홈페이지" data-en="ALPHA Resolve website">알파리졸브 홈페이지</a><a class="button" href="https://daesungnetwork.com/" target="_blank" rel="noopener noreferrer" data-ko="대성네트웍 홈페이지" data-en="Daesung Network website">대성네트웍 홈페이지</a><a class="button" href="https://www.instagram.com/alpharesolve.kr/" target="_blank" rel="noopener noreferrer">Instagram</a></div></div></div></section>
   </main>
-  <footer class="wrap footer"><span>© <span id="year">2026</span> SEUNGHUN BAEK</span><a href="#top" data-ko="맨 위로" data-en="Back to top">맨 위로</a></footer>
+  <footer class="wrap footer">
+    <span>© <span id="year">2026</span> SEUNGHUN BAEK</span>
+    <div class="visitor-counter" data-status="loading">
+      <div class="visitor-total"><span class="visitor-dot" aria-hidden="true"></span><span data-ko="누적 방문자" data-en="TOTAL VISITORS">누적 방문자</span><strong id="vercount_value_site_uv" aria-live="polite" aria-atomic="true">—</strong><span data-ko="명" data-en="">명</span></div>
+      <small data-ko="2026.10.13부터 · 브라우저 기준" data-en="Since Oct 13, 2026 · per browser">2026.10.13부터 · 브라우저 기준</small>
+      <small class="visitor-unavailable" role="status" data-ko="현재 방문자 수를 불러올 수 없습니다." data-en="Visitor count is temporarily unavailable.">현재 방문자 수를 불러올 수 없습니다.</small>
+    </div>
+    <a href="#top" data-ko="맨 위로" data-en="Back to top">맨 위로</a>
+  </footer>
   <script>
     (() => {
       const buttons = document.querySelectorAll('[data-lang]');
@@ -162,8 +180,37 @@
       setLanguage(initial);
     })();
   </script>
+
+  <script>
+    (() => {
+      // Count only the live site, so local previews do not affect its statistics.
+      if (location.hostname !== 'seunghun-baek823.github.io') return;
+      const panel = document.querySelector('.visitor-counter');
+      const value = document.getElementById('vercount_value_site_uv');
+      let timeout;
+      const observer = new MutationObserver(() => {
+        if (/^\d[\d,]*$/.test(value.textContent.trim())) {
+          panel.dataset.status = 'ready';
+          clearTimeout(timeout);
+          observer.disconnect();
+        }
+      });
+      observer.observe(value, { childList: true, characterData: true, subtree: true });
+      timeout = setTimeout(() => { panel.dataset.status = 'error'; }, 12000);
+      const counterScript = document.createElement('script');
+      counterScript.src = 'https://events.vercount.one/js';
+      counterScript.async = true;
+      counterScript.referrerPolicy = 'strict-origin';
+      counterScript.onerror = () => {
+        clearTimeout(timeout);
+        panel.dataset.status = 'error';
+      };
+      document.head.appendChild(counterScript);
+    })();
+  </script>
 </body>
 </html>
+
 
 
 
