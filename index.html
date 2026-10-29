@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="color-scheme" content="dark">
   <meta name="theme-color" content="#090a0d">
-  <meta name="description" content="백승훈의 개인 프로필. 대성네트웍의 현장 경험과 알파리졸브의 소프트웨어 기술로 현장의 변화를 만듭니다.">
+  <meta name="description" content="백승훈의 개인 프로필. 조선 설계와 통신 인프라 사업의 경험을 바탕으로, 업무 개선과 소프트웨어·AI 적용을 연결합니다.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="백승훈 | SEUNGHUN BAEK">
-  <meta property="og:description" content="현장의 경험을, 다음의 기술로. 백승훈의 사업과 관심 분야를 소개합니다.">
+  <meta property="og:description" content="현장을 이해하고, 일하는 방식을 바꿉니다. 백승훈의 경력과 업무 개선·소프트웨어·AI 사업 방향을 소개합니다.">
   <title>백승훈 | SEUNGHUN BAEK</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23090a0d'/%3E%3Ctext x='15' y='47' font-family='Arial,sans-serif' font-size='44' font-weight='700' fill='%23ffffff'%3Eb%3C/text%3E%3Ccircle cx='49' cy='47' r='5' fill='%233c73ff'/%3E%3C/svg%3E">
   <style>
@@ -94,6 +94,15 @@
     .visitor-counter[data-status=error] .visitor-unavailable{display:block}
     @media(max-width:680px){.visitor-counter{order:3;flex-basis:100%;text-align:left;padding-top:12px;border-top:1px solid var(--line)}.visitor-total{justify-content:flex-start}}
       .workspace-entry{color:var(--blue);font-weight:600}.footer-links{display:flex;flex-wrap:wrap;gap:18px;align-items:center}
+
+    /* A compact career summary keeps dates and current roles distinct. */
+    .career-summary{margin:28px 0 0;font-size:14px}
+    .career-summary>div{display:grid;grid-template-columns:minmax(0,145px) minmax(0,1fr);gap:20px;padding:15px 0;border-top:1px solid var(--line)}
+    .career-summary dt{color:var(--text);font-weight:600}
+    .career-summary dd{margin:0}
+    .career-summary dd span{display:block}
+    .career-period{color:var(--blue);margin-bottom:3px}
+    @media(max-width:680px){.career-summary>div{grid-template-columns:minmax(0,1fr);gap:5px}}
   </style>
 </head>
 <body data-language="ko">
@@ -111,8 +120,8 @@
       <p class="eyebrow"><span class="blue">BUSINESS & TECHNOLOGY</span> PERSONAL PROFILE</p>
       <div class="hero-layout">
         <div class="hero-copy">
-        <h1 id="hero-title"><span data-ko="현장의 경험을," data-en="Experience from the field.">현장의 경험을,</span><span data-ko="다음의 기술로." data-en="Technology for what’s next.">다음의 기술로.</span></h1>
-        <div class="intro-side"><p class="name" data-ko="백승훈" data-en="SEUNGHUN BAEK">백승훈</p><p class="role" data-ko="알파리졸브 대표 · 대성네트웍 부사장" data-en="CEO, ALPHA Resolve · Vice President, Daesung Network">알파리졸브 대표 · 대성네트웍 부사장</p><p class="intro" data-ko="통신 인프라 현장의 경험을 바탕으로, 기업의 일하는 방식을 소프트웨어와 AI로 바꾸는 일을 합니다." data-en="I bring experience in telecommunications infrastructure to building software and AI solutions that improve how businesses work.">통신 인프라 현장의 경험을 바탕으로, 기업의 일하는 방식을 소프트웨어와 AI로 바꾸는 일을 합니다.</p><a href="#work" data-ko="현재의 활동 살펴보기" data-en="Explore my work">현재의 활동 살펴보기</a></div>
+        <h1 id="hero-title"><span data-ko="현장을 이해하고," data-en="Understanding the field.">현장을 이해하고,</span><span data-ko="일하는 방식을 바꿉니다." data-en="Improving how we work.">일하는 방식을 바꿉니다.</span></h1>
+        <div class="intro-side"><p class="name" data-ko="백승훈" data-en="SEUNGHUN BAEK">백승훈</p><p class="role" data-ko="알파리졸브 대표 · 대성네트웍 부사장" data-en="CEO, ALPHA Resolve · Vice President, Daesung Network">알파리졸브 대표 · 대성네트웍 부사장</p><p class="intro" data-ko="조선 설계와 통신 인프라 사업에서 쌓은 경험을 바탕으로, 기업의 업무 흐름을 개선하고 필요한 소프트웨어와 AI를 연결하는 일을 합니다." data-en="Drawing on experience in ship design and telecommunications infrastructure, I improve business workflows and connect them with the software and AI they need.">조선 설계와 통신 인프라 사업에서 쌓은 경험을 바탕으로, 기업의 업무 흐름을 개선하고 필요한 소프트웨어와 AI를 연결하는 일을 합니다.</p><a href="#work" data-ko="현재의 활동 살펴보기" data-en="Explore my work">현재의 활동 살펴보기</a></div>
         </div>
         <figure class="hero-photo"><img src="./profile-seunghun-baek.jpg" alt="백승훈 프로필 사진 / SEUNGHUN BAEK portrait" width="1024" height="1536" fetchpriority="high" decoding="async"></figure>
       </div>
@@ -121,20 +130,28 @@
     </section>
     <section id="about" class="section" aria-labelledby="about-title">
       <div class="section-top"><p class="eyebrow"><span class="blue">01</span> ABOUT</p><h2 id="about-title" data-ko="기술의 출발점은, 현장에서 마주하는 문제입니다." data-en="Useful technology starts with a real problem.">기술의 출발점은, 현장에서 마주하는 문제입니다.</h2></div>
-      <div class="about-body"><p data-ko="대성네트웍에서 통신 인프라 구축·유지보수 사업에 참여하며, 현장과 사무실 사이에 반복되는 업무를 가까이에서 바라봐 왔습니다." data-en="Through telecommunications infrastructure construction and maintenance at Daesung Network, I have seen the repetitive work that connects field teams and the office.">대성네트웍에서 통신 인프라 구축·유지보수 사업에 참여하며, 현장과 사무실 사이에 반복되는 업무를 가까이에서 바라봐 왔습니다.</p><p data-ko="알파리졸브에서는 그 경험을 소프트웨어로 연결합니다. 현장업무 자동화와 스마트공장, 에너지 관리, AI를 통해 중소기업에 필요한 변화를 구체적인 서비스로 만들어가고 있습니다." data-en="At ALPHA Resolve, I connect that experience with software. My focus is on practical solutions for small and medium-sized businesses: field operations automation, smart factories, energy management and AI.">알파리졸브에서는 그 경험을 소프트웨어로 연결합니다. 현장업무 자동화와 스마트공장, 에너지 관리, AI를 통해 중소기업에 필요한 변화를 구체적인 서비스로 만들어가고 있습니다.</p><div class="principle" data-ko="현장을 이해하고, 필요한 기술을 연결하고, 실행합니다." data-en="Understand the work. Connect the right technology. Make it happen.">현장을 이해하고, 필요한 기술을 연결하고, 실행합니다.</div></div>
+      <div class="about-body">
+        <p data-ko="설계와 현장 업무에서 쌓은 경험을 바탕으로 문제의 원인과 일의 흐름을 살핍니다. 알파리졸브에서는 이 경험을 중소기업의 업무 개선과 소프트웨어·AI 적용으로 연결하고자 합니다." data-en="I draw on experience in design and field operations to understand problems and workflows. At ALPHA Resolve, I aim to connect that experience with workflow improvement, software and AI for small and medium-sized businesses.">설계와 현장 업무에서 쌓은 경험을 바탕으로 문제의 원인과 일의 흐름을 살핍니다. 알파리졸브에서는 이 경험을 중소기업의 업무 개선과 소프트웨어·AI 적용으로 연결하고자 합니다.</p>
+        <p data-ko="토요타 생산방식(TPS), TRIZ, 식스시그마 등 개선 방법론에 대한 이해를 바탕으로, 현장의 불편과 업무 흐름을 먼저 살피고 필요한 변화를 찾습니다." data-en="With an understanding of improvement methods including the Toyota Production System (TPS), TRIZ and Six Sigma, I start with everyday difficulties and workflows to identify useful changes.">토요타 생산방식(TPS), TRIZ, 식스시그마 등 개선 방법론에 대한 이해를 바탕으로, 현장의 불편과 업무 흐름을 먼저 살피고 필요한 변화를 찾습니다.</p>
+        <dl class="career-summary">
+          <div><dt data-ko="HD현대삼호" data-en="HD Hyundai Samho">HD현대삼호</dt><dd><span class="career-period" data-ko="2008.01–2016.06 · 8년 6개월" data-en="Jan 2008–Jun 2016 · 8 years 6 months">2008.01–2016.06 · 8년 6개월</span><span data-ko="선체 구조설계·기본설계 · 주니어보드 주요 사내 개선 프로젝트 참여 · 과장 퇴사" data-en="Hull structural and basic design; contributed to major internal improvement projects through the Junior Board; final position: Manager.">선체 구조설계·기본설계 · 주니어보드 주요 사내 개선 프로젝트 참여 · 과장 퇴사</span></dd></div>
+          <div><dt data-ko="대성네트웍" data-en="Daesung Network">대성네트웍</dt><dd><span class="career-period" data-ko="2016.07–현재" data-en="Jul 2016–Present">2016.07–현재</span><span data-ko="통신 인프라 사업·지속적 업무 개선 · 현 관리부 부사장 (2025.06.16 승진)" data-en="Telecommunications infrastructure and continuous improvement; currently Vice President, Administration (promoted Jun 16, 2025).">통신 인프라 사업·지속적 업무 개선 · 현 관리부 부사장 (2025.06.16 승진)</span></dd></div>
+          <div><dt data-ko="학력" data-en="Education">학력</dt><dd><span data-ko="인하대학교 조선해양공학 전공" data-en="Naval Architecture and Ocean Engineering, Inha University">인하대학교 조선해양공학 전공</span></dd></div>
+        </dl>
+      </div>
     </section>
     <section id="work" class="section" aria-labelledby="work-title">
       <div class="section-top"><p class="eyebrow"><span class="blue">02</span> CURRENT WORK</p><h2 id="work-title" data-ko="두 개의 현장, 하나의 방향." data-en="Two perspectives. One direction.">두 개의 현장, 하나의 방향.</h2></div>
       <div class="work-grid">
-        <article class="work-card"><div class="card-head"><span class="card-num">01 / SOFTWARE</span><a class="tag" href="https://www.alpharesolve.co.kr" target="_blank" rel="noopener noreferrer">ALPHA Resolve</a></div><h3 data-ko="알파리졸브" data-en="ALPHA Resolve">알파리졸브</h3><p class="position" data-ko="대표" data-en="Chief Executive Officer">대표</p><p class="description" data-ko="중소기업의 현장업무 자동화와 제조 현장의 디지털 전환을 위한 소프트웨어 사업을 추진합니다." data-en="Developing software for field operations automation and the digital transformation of small and medium-sized manufacturers.">중소기업의 현장업무 자동화와 제조 현장의 디지털 전환을 위한 소프트웨어 사업을 추진합니다.</p><div class="card-foot"><span>FIELD OPERATIONS</span><span>MES · FEMS</span><span>AI</span></div></article>
-        <article class="work-card"><div class="card-head"><span class="card-num">02 / INFRASTRUCTURE</span><a class="tag" href="https://daesungnetwork.com/" target="_blank" rel="noopener noreferrer" data-ko="대성네트웍" data-en="Daesung Network">대성네트웍</a></div><h3 data-ko="대성네트웍" data-en="Daesung Network">대성네트웍</h3><p class="position" data-ko="부사장" data-en="Vice President">부사장</p><p class="description" data-ko="무선 기지국·중계기 등 통신 인프라 구축과 유지보수 사업을 기반으로, 현장의 품질과 안전, 업무 개선에 집중합니다." data-en="Working across telecommunications infrastructure construction and maintenance, with a focus on quality, safety and better field operations.">무선 기지국·중계기 등 통신 인프라 구축과 유지보수 사업을 기반으로, 현장의 품질과 안전, 업무 개선에 집중합니다.</p><div class="card-foot"><span>TELECOM</span><span data-ko="품질 · 안전" data-en="QUALITY · SAFETY">품질 · 안전</span><span data-ko="현장 운영" data-en="OPERATIONS">현장 운영</span></div></article>
+        <article class="work-card"><div class="card-head"><span class="card-num">01 / SOFTWARE</span><a class="tag" href="https://www.alpharesolve.co.kr" target="_blank" rel="noopener noreferrer">ALPHA Resolve</a></div><h3 data-ko="알파리졸브" data-en="ALPHA Resolve">알파리졸브</h3><p class="position" data-ko="대표" data-en="Chief Executive Officer">대표</p><p class="description" data-ko="현장과 업무 흐름을 먼저 살피고, 중소기업의 현장업무 자동화·MES·FEMS·제조 AI 사업을 추진합니다." data-en="Developing business initiatives in field operations automation, MES, FEMS and manufacturing AI for small and medium-sized businesses, starting with their workflows.">현장과 업무 흐름을 먼저 살피고, 중소기업의 현장업무 자동화·MES·FEMS·제조 AI 사업을 추진합니다.</p><div class="card-foot"><span>FIELD OPERATIONS</span><span>MES · FEMS</span><span>AI</span></div></article>
+        <article class="work-card"><div class="card-head"><span class="card-num">02 / INFRASTRUCTURE</span><a class="tag" href="https://daesungnetwork.com/" target="_blank" rel="noopener noreferrer" data-ko="대성네트웍" data-en="Daesung Network">대성네트웍</a></div><h3 data-ko="대성네트웍" data-en="Daesung Network">대성네트웍</h3><p class="position" data-ko="현 관리부 부사장" data-en="Current role: Vice President, Administration">현 관리부 부사장</p><p class="description" data-ko="무선 기지국·중계기 등 통신 인프라 구축·유지보수 사업에 참여하며, 품질·안전과 지속적인 업무 개선에 집중합니다." data-en="Working across telecommunications infrastructure construction and maintenance, with a focus on quality, safety and continuous improvement.">무선 기지국·중계기 등 통신 인프라 구축·유지보수 사업에 참여하며, 품질·안전과 지속적인 업무 개선에 집중합니다.</p><div class="card-foot"><span>TELECOM</span><span data-ko="품질 · 안전" data-en="QUALITY · SAFETY">품질 · 안전</span><span data-ko="현장 운영" data-en="OPERATIONS">현장 운영</span></div></article>
       </div>
     </section>
     <section id="focus" class="section" aria-labelledby="focus-title">
       <div class="section-top"><p class="eyebrow"><span class="blue">03</span> FOCUS AREAS</p><h2 id="focus-title" data-ko="지금 집중하는 일." data-en="Where I focus.">지금 집중하는 일.</h2></div>
       <div class="field-list">
         <details open><summary><span class="field-no">01</span><h3 data-ko="AI 기반 현장업무 자동화" data-en="AI-powered field operations">AI 기반 현장업무 자동화</h3><span class="field-en">FIELD OPERATIONS</span><span class="plus" aria-hidden="true">+</span></summary><p data-ko="원청 자료의 접수·분류·배포부터 현장 사진과 작업 기록, 반복 서류 작성까지. 착수부터 완료까지 이어지는 업무를 하나의 흐름으로 연결하는 플랫폼을 지향합니다." data-en="Connecting project intake, document classification and distribution with site photos, work records and recurring paperwork — bringing field operations into one workflow, from start to finish.">원청 자료의 접수·분류·배포부터 현장 사진과 작업 기록, 반복 서류 작성까지. 착수부터 완료까지 이어지는 업무를 하나의 흐름으로 연결하는 플랫폼을 지향합니다.</p></details>
-        <details><summary><span class="field-no">02</span><h3 data-ko="스마트공장과 생산 관리" data-en="Smart factories & production">스마트공장과 생산 관리</h3><span class="field-en">MES / SMART FACTORY</span><span class="plus" aria-hidden="true">+</span></summary><p data-ko="제조실행시스템(MES)을 중심으로 생산 현장의 정보를 수집하고 연결합니다. 기업의 규모와 실제 업무에 맞는 시스템으로 생산 관리의 디지털 전환을 돕는 것이 목표입니다." data-en="Bringing production data together through manufacturing execution systems (MES), with solutions shaped around the scale and everyday workflows of each business.">제조실행시스템(MES)을 중심으로 생산 현장의 정보를 수집하고 연결합니다. 기업의 규모와 실제 업무에 맞는 시스템으로 생산 관리의 디지털 전환을 돕는 것이 목표입니다.</p></details>
+        <details><summary><span class="field-no">02</span><h3 data-ko="스마트공장과 생산 관리" data-en="Smart factories & production">스마트공장과 생산 관리</h3><span class="field-en">MES / SMART FACTORY</span><span class="plus" aria-hidden="true">+</span></summary><p data-ko="생산 흐름과 기록 방식을 먼저 정리하고, 기업의 규모와 실제 업무에 맞는 제조실행시스템(MES) 적용을 추진합니다." data-en="Planning manufacturing execution system (MES) applications around each business’s scale and actual workflows, starting with its production processes and records.">생산 흐름과 기록 방식을 먼저 정리하고, 기업의 규모와 실제 업무에 맞는 제조실행시스템(MES) 적용을 추진합니다.</p></details>
         <details><summary><span class="field-no">03</span><h3 data-ko="에너지 관리와 데이터 활용" data-en="Energy management & data">에너지 관리와 데이터 활용</h3><span class="field-en">FEMS / DATA</span><span class="plus" aria-hidden="true">+</span></summary><p data-ko="공장에너지관리시스템(FEMS)과 데이터 분석을 통해 에너지 사용 현황을 파악하고, 현장에서 실행할 수 있는 개선 기회를 찾는 일에 관심을 두고 있습니다." data-en="Exploring how factory energy management systems (FEMS) and data analysis can make energy use visible and reveal practical opportunities for improvement.">공장에너지관리시스템(FEMS)과 데이터 분석을 통해 에너지 사용 현황을 파악하고, 현장에서 실행할 수 있는 개선 기회를 찾는 일에 관심을 두고 있습니다.</p></details>
       </div>
     </section>
@@ -164,7 +181,7 @@
         buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.lang === lang)));
         nav.setAttribute('aria-label', lang === 'en' ? 'Main navigation' : '주요 메뉴');
         document.title = lang === 'en' ? 'SEUNGHUN BAEK | Business & Technology' : '백승훈 | SEUNGHUN BAEK';
-        const description = lang === 'en' ? 'The personal profile of SEUNGHUN BAEK. Connecting telecommunications field experience with software and AI at ALPHA Resolve and Daesung Network.' : '백승훈의 개인 프로필. 대성네트웍의 현장 경험과 알파리졸브의 소프트웨어 기술로 현장의 변화를 만듭니다.';
+        const description = lang === 'en' ? 'The personal profile of SEUNGHUN BAEK. Connecting experience in ship design and telecommunications infrastructure with workflow improvement, software and AI.' : '백승훈의 개인 프로필. 조선 설계와 통신 인프라 사업의 경험을 바탕으로, 업무 개선과 소프트웨어·AI 적용을 연결합니다.';
         document.querySelector('meta[name="description"]').content = description;
         document.querySelector('meta[property="og:title"]').content = document.title;
         document.querySelector('meta[property="og:description"]').content = description;
